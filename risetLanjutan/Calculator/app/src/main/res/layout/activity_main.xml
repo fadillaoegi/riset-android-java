@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:backgroundTint="@color/black"
+    tools:context=".MainActivity">
+
+<!--  Logo  -->
+  <LinearLayout
+      android:id="@+id/image_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center">
+      <androidx.cardview.widget.CardView
+          android:layout_width="wrap_content"
+          app:cardCornerRadius="200dp"
+          android:layout_height="wrap_content">
+          <ImageView
+              android:src="@drawable/dilrial"
+              android:layout_width="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center"/>
+      </androidx.cardview.widget.CardView>
+<!--  Akhir Logo    -->
+
+<!--   Form   -->
+  </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLebel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label1"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/image_view"/>
+
+    <EditText
+        android:id="@+id/et_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tvLebel1"
+        android:hint="@string/hint1"/>
+
+    <TextView
+        android:id="@+id/tvLebel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/label2"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/et_first"/>
+
+    <EditText
+        android:id="@+id/et_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/tvLebel2"
+        android:hint="@string/hint2"/>
+
+<!--  Button  -->
+   <LinearLayout
+       android:id="@+id/ll"
+       android:layout_below="@id/et_second"
+       android:layout_marginTop="20dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center_horizontal">
+       <Button
+           android:id="@+id/btn_plus"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/operatorPlus"
+           android:textStyle="bold"
+           android:onClick="plus"
+           android:textSize="38sp"/>
+       <Button
+           android:id="@+id/btn_minus"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/operatorMinus"
+           android:onClick="ClickMin"
+           android:textStyle="bold"
+           android:textSize="38sp"/>
+       <Button
+           android:id="@+id/btn_multiple"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/operatorMultiple"
+           android:textStyle="bold"
+           android:textSize="38sp"/>
+       <Button
+           android:id="@+id/btn_distribution"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/operatorDistribution"
+           android:textStyle="bold"
+           android:onClick="ClickDistribution"
+           android:textSize="38sp"/>
+   </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll"
+        android:textSize="60sp"
+        android:gravity="center"
+        android:text="0"/>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="label1">Input nilai pertama</string>
+    <string name="label2">Input nilai kedua</string>
+    <string name="hint1">Nilai pertama, contoh: 1</string>
+    <string name="hint2">Nilai pertama, contoh: 2</string>
+    <string name="operatorPlus">+</string>
+    <string name="operatorMinus">-</string>
+    <string name="operatorMultiple">x</string>
+    <string name="operatorDistribution">/</string>
+
+</resources>
